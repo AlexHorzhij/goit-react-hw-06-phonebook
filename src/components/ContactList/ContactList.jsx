@@ -9,11 +9,12 @@ export function ContactList({contacts}) {
     const removeContact = (e) => {
         const deletedContact = e.target.id;
         dispatch(contactRemove(deletedContact));
-    }
+    };
 
     return (<List>{contacts.map(contact => <Item key={contact.id}>{contact.name}: {contact.number}
-        <Button id={contact.id} onClick={removeContact}>Delete</Button></Item>)}</List>)
-}
+        <Button id={contact.id} onClick={removeContact}>Delete</Button></Item>)}</List>
+        );
+};
     
 ContactList.propTypes = {
     contacts: PropTypes.arrayOf(PropTypes.shape({
@@ -21,4 +22,4 @@ ContactList.propTypes = {
         name: PropTypes.string.isRequired,
         number: PropTypes.string.isRequired,
     })).isRequired,
-}
+};

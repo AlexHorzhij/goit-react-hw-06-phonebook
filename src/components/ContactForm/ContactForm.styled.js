@@ -1,34 +1,34 @@
-import styled from '@emotion/styled'
+import styled from "styled-components";
 
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
-    font-size: 20px;
-    padding: 15px 10px;
+    font-size: ${p=>p.theme.fontSize.l};
+    padding: ${p=>p.theme.space[4]} ${p=>p.theme.space[3]};
     border: 1px solid black;        
 `
 
 export const FormTitle = styled.h3`
-    margin: 0px;
-    font-size: 20px;
-    margin-bottom: 5px;
+    margin: ${p=>p.theme.space[0]};
+    font-size: ${p=>p.theme.fontSize.l};
+    margin-bottom: ${p=>p.theme.space[3]};
     line-height: 1.0;
 `
 export const FormInput = styled.input`
     width: 300px;
-    padding: 5px;
-    margin-bottom: 20px;
-    border: 1px solid gray;
+    padding: ${p=>p.theme.space[2]};
+    margin-bottom: ${p=>p.theme.space[5]};
+    border: 1px solid ${p=>p.theme.colors.hover};
 `
 
 export const SubmitButton = styled.button`
-    background-color: white;
+    background-color: ${p=>p.theme.colors.white};
     width: 150px;
-    padding: 5px;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: ${p=>p.theme.space[2]};
+    font-size: ${p=>p.theme.fontSize.s};
+    border-radius: ${p=>p.theme.radii.normal};
     :hover, :focus{
-        background-color: gray;
-        color: white;
+        background-color: ${p=>p.theme.colors.hover};
+        color: ${p=>p.theme.colors.white};
     }
 `

@@ -1,4 +1,4 @@
-import {SelectTitle, SelectInput} from './Filter.styled';
+import { SelectTitle, SelectInput, FilterWrapper, Button } from './Filter.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { contactFilter } from 'redux/contactsSlice';
 
@@ -12,8 +12,15 @@ export function Filter() {
         dispatch(contactFilter(serchName));
     };
 
+    const clearSearch = () => {
+        dispatch(contactFilter(""));
+    };
+
 
     return <><SelectTitle> Find contacts by name</SelectTitle> 
-        <SelectInput type="text" name="serch" value={serchName} onChange={findContact}/>
-          </>
+        <FilterWrapper>
+            <SelectInput type="text" name="serch" value={serchName} onChange={findContact} ></SelectInput>
+            <Button onClick={clearSearch}>X</Button>
+        </FilterWrapper>
+        </>
 };

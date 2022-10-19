@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     contacts: [],
@@ -19,9 +19,8 @@ export const contactsSlice = createSlice({
         state.filter = action.payload;
     },
   },
-})
+});
 
-// Action creators are generated for each case reducer function
-export const { contactAdd, contactRemove, contactFilter } = contactsSlice.actions
+export const { contactAdd, contactRemove, contactFilter } = contactsSlice.actions;
 
-export default contactsSlice.reducer
+export default contactsSlice.reducer;

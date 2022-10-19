@@ -9,8 +9,6 @@ export function ContactForm() {
     const contacts = useSelector((state) => state.contacts.contacts);
     const dispatch = useDispatch();
 
-    console.log(contacts)
-
     const addContact = (e) => {
         e.preventDefault();
         const form = e.currentTarget;
